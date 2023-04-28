@@ -57,5 +57,5 @@ for (var i = 0; i < abilities.length; i++) {
 
 // Alternatively use the `$.each` method
  $.each(abilities, function(i, ability) {
-    abilityEl.append("<div>" + ability + "</div>");
- })
+    abilityEl.append("<div>" + ability + "</div>")
+ });
