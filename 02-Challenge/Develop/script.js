@@ -23,20 +23,38 @@ var arrayForHour = [
   pmHour5
 ];
 
+var arrayTime = [
+  "9AM",
+  "10AM",
+  "11AM",
+  "12PM",
+  "1PM",
+  "2PM",
+  "3PM",
+  "4PM",
+  "5PM"
+
+
+]
+
 var rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
   $('#currentDay').text(rightNow);
 
-  
+ $(function() {
+  for (i= 0; i < arrayForHour.length; i++ ) {
+    arrayForHour[i].attr('class', 'row time-block');
+    arrayForHour[i].text("Hello World");
+    var hour = arrayForHour[i];
+   };
+ 
+ });
 
 $(function () {
   
-
-
-
-   for (i= 0; i < arrayForHour.length; i++ ) {
-    arrayForHour.attr('class', 'row', 'time-block');
-    $('hour').text(arrayForHour);
-    var hour = arrayForHour[i];
+  for (i= 0; i < arrayForHour.length; i++ ) {
+   arrayForHour[i].attr('class', 'row time-block')
+   arrayForHour[i].text(arrayTime[i]);
+   
    };
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
