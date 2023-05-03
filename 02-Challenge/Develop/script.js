@@ -1,3 +1,4 @@
+//this function changes the color of the timeslots.
 $('.time-block').each(function() {
  var blockHour = parseInt($(this).attr('id').split('-')[1]);
  var currentHour = dayjs().hour()
@@ -9,10 +10,10 @@ $('.time-block').each(function() {
   $(this).addClass('future');
  };
 });
-
+// The variable displays the current time using day.js.
 var rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
 $('#currentDay').text(rightNow);
-
+//The jquery below saves what is being put into the timeslots and saves it into the local storage.
 $('.saveBtn').click(function() {
   var value = $(this).siblings('.description').val();
   var time = $(this).parent().attr('id');
